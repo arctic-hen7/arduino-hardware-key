@@ -1,0 +1,13 @@
+[package]
+name = "arduino-hardware-key"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serialport = "4.6.0"
+thiserror = "2.0.3"
+cryptosystem = { version = "0.1", path = "../cryptosystem/" }
+bincode = "1.3.3"
+serde = { version = "1.0.215", features = ["derive"] }
+rand = "0.8.5"
+argon2 = "0.5.3"

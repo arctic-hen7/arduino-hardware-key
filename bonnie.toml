@@ -1,0 +1,14 @@
+version = "0.3.2"
+
+[scripts]
+
+[scripts.compile.subcommands]
+leonardo = "arduino-cli compile --fqbn arduino:avr:leonardo ."
+# 5V Pro Micro!
+pro-micro = "arduino-cli compile --fqbn SparkFun:avr:promicro:cpu=16MHzatmega32U4 ."
+
+[scripts.upload.subcommands]
+leonardo.cmd = "arduino-cli upload -p %port --fqbn arduino:avr:leonardo ."
+leonardo.args = [ "port" ]
+pro-micro.cmd = "arduino-cli upload -p %port --fqbn SparkFun:avr:promicro:cpu=16MHzatmega32U4 ."
+pro-micro.args = [ "port" ]
